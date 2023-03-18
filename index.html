@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>I-QOF</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 <body>
-    <header>
-        <nav class="border-gray-200 px-4 lg:px-6 py-2.5 drop-shadow-lg" style="background: linear-gradient(105.01deg, #182FA6 -0.78%, #001064 97.24%);">
+    <header class="sticky top-0">
+        <nav class="sticky w-full top-0 border-gray-200 py-5 drop-shadow-lg" style="background: linear-gradient(105.01deg, #182FA6 -0.78%, #001064 97.24%);">
             <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="#" class="flex items-center">
                     <img src="Logo.png" class="mr-3 h-6 sm:h-9" alt="I-QOF" />
                     <span class="self-center text-white text-xl font-semibold whitespace-nowrap">I-QOF</span>
                 </a>
+                
                 <!-- <div class="flex items-center lg:order-2">
                     <a href="#" class="text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</a>
                     <a href="#" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Get started</a>
@@ -41,9 +45,7 @@
         </nav>
     </header>
 
-    <section id="home" class="" 
-        style="background:url('bg-home.png');"
-    >
+    <section id="home" style="margin-left: 10; background:url('bg-home.png');">
         <div class="flex flex-col py-8 justify-center items-center h-screen px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16">
            
             <h1 class="text-center mb-6 w-4/5 text-3xl font-extrabold leading-none text-white">
@@ -120,7 +122,7 @@
         </div>
     </section>
 
-    <section id="product-web" class="min-h-screen" style="background: linear-gradient(76.46deg, #001064 44.25%, #182FA6 95.13%);">
+    <section id="product-web" class="min-h-screen" style="background: linear-gradient(76.46deg, #182FA6 2.1%, #001064 95.13%);">
         <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
             
             <div class="bg-gray-900 bg-opacity-40 p-4 rounded-md ">
@@ -139,18 +141,31 @@
         </div>
     </section>
 
-    <section id="contact-us" class="min-h-screen">
-        <!-- <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
-                <h2 class="mb-4 text-4xl font-bold text-gray-900">Powering innovation at <span class="font-extrabold">200,000+</span> companies worldwide</h2>
-                <p class="mb-4 font-light">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
-                <p class="mb-4 font-medium">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease.</p>
-                <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
-                    Learn more
-                    <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                </a>
+    <section style="background: linear-gradient(98.38deg, #001064 46.24%, #182FA6 98.57%);" id="contact-us" class="min-h-screen">
+       <div class="flex justify-center items-center">
+            <div class="bg-white w-3/4 my-10 rounded p-4">
+                <h1 class="text-3xl font-bold">Hubungi Kami</h1>
+                <p>Ingin melakukan diskusi mengenai project Anda ?</p>
+                <hr class="my-5"/>
+                <div class="grid grid-cols-0 sm:grid-cols-2 gap-2">
+                    <div class="flex flex-col">
+                        <label>Nama</label>
+                        <input type="text" class="border-2 p-2 rounded-md" id="nama" />
+                    </div>
+                    <div class="flex flex-col">
+                        <label>Subject</label>
+                        <input type="text" class="border-2 p-2 rounded-md"  id="subject"/>
+                    </div>
+                </div>
+                <div class="flex flex-col mt-2">
+                    <label>Pesan</label>
+                    <textarea type="text" class="border-2 p-2 rounded-md" id="pesan"></textarea>
+                </div>
+                <div class="flex justify-end my-10">
+                    <button class="bg-[#001064] text-white p-2" id="handle-hubungi">Hubungi</button>
+                </div>
             </div>
-        </div> -->
+       </div>
     </section>
 
     <footer class="p-4 bg-gray-50 sm:p-6 dark:bg-gray-800">
@@ -162,7 +177,7 @@
                     <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
                     </a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <a href="https://www.instagram.com/iqof.dev" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
                     </a>
                     <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
@@ -180,5 +195,16 @@
     </footer>
     
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript">
+        $("#handle-hubungi").on('click',function (params) {
+            // console.log("es");
+            window.open("https://wa.me/6282165368470?text=nama : "+$("#nama").val()+"%0A"+"*Subject :*"+"%0A"+$('#subject').val()+"%0A"+"*Pesan :*"+"%0A"+$('#pesan').val(),"_blank")
+        })
+    </script>
 </body>
 </html>
